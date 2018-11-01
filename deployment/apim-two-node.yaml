@@ -833,16 +833,16 @@ Outputs:
   GatewayHttpsUrl:
     Value: !Join
       - ''
-      - - ''
+      - - 'https://'
         - !GetAtt
           - WSO2APIMLoadBalancer
           - DNSName
         - ':8243'
     Description: APIM HTTPS Gateway endpoint
-  GatewayHttpsUrl:
+  GatewayHttpUrl:
     Value: !Join
       - ''
-      - - ''
+      - - 'http://'
         - !GetAtt
           - WSO2APIMLoadBalancer
           - DNSName
