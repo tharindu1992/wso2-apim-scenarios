@@ -28,7 +28,7 @@ DIR1=integration
 FILE1=${DIR}/infrastructure.properties
 FILE2=${DIR}/testplan-props.properties
 
-host="https"`grep -w "MgtConsoleUrl" ${FILE1} ${FILE2} | cut -d'=' -f2 | cut -d'\' -f2`
+host="https"`grep -w "StoreUrl" ${FILE1} ${FILE2} | cut -d'=' -f2 | cut -d'\' -f2`
 
 CONNECT_RETRY_COUNT=20
 
@@ -39,8 +39,8 @@ wait_for_server_startup() {
     max_attempts=100
     attempt_counter=0
 
-    MGT_CONSOLE_URL=$host
-    until $(curl -k --output /dev/null --silent --head --fail $MGT_CONSOLE_URL); do
+    STORE_URL=$host
+    until $(curl -k --output /dev/null --silent --head --fail $STORE_URL); do
        if [ ${attempt_counter} -eq ${max_attempts} ];then
         echo "Max attempts reached"
         exit 1
