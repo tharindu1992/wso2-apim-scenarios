@@ -1,7 +1,7 @@
 #!/bin/bash
 
 repo='https://github.com/wso2/product-apim.git'
-branch='2.x'
+branch='product-scenario'
 TEST_DIR='product-apim'
 DIR=$2
 export DATA_BUCKET_LOCATION=$DIR
