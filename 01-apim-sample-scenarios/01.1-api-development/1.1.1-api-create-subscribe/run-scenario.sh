@@ -12,5 +12,5 @@ mvn clean install
 
 echo "Copying surefire-reports to data bucket"
 
-cp -r modules/integration/tests-integration/tests-backend/target/surefire-reports ${DIR}
+cp -r product-scenarios/1-api-updates-using-new-versions/1.1-manage-api-versions/1.1.1-create-new-api-version/target/surefire-reports ${DIR}
 ls ${DIR}
